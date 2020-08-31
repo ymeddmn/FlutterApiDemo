@@ -14,6 +14,7 @@ import 'package:flutterdemo/func/statuebarfunc.dart';
 import 'package:flutterdemo/func/streamcontrollerbroadcastfunc.dart';
 import 'package:flutterdemo/func/streamcontrollfunc.dart';
 import 'package:flutterdemo/ui/ExpandFlowMenuWidget1.dart';
+import 'package:flutterdemo/ui/appbarstatusbar.dart';
 import 'package:flutterdemo/ui/expendmenu.dart';
 import 'package:flutterdemo/widget/AnimatedCrossFadeWidget.dart';
 import 'package:flutterdemo/widget/CardWidget.dart';
@@ -76,6 +77,8 @@ class Constants {
 
   static List<PageBean> uiRoutes = [
     PageBean('Other控件', OtherWidget(), 'OtherWidget', 'Offstage'),
+    PageBean('不设置appbar状态栏沉浸式', AppbarStatusbarFunc(), 'appbarstatusbar.dart',
+        'scaffold不设置appbar的时候body内容会顶到状态栏上方，本例解决这个问题'),
     PageBean('FLow实现原型menu', ExpandFlowMenuWidget1(), 'ExpandFlowMenuWidget1',
         '使用Flow实现自定义效果，结果是个正选函数效果'),
     PageBean('Flow实现圆圈menu效果', ExpandMenuWidget(), 'ExpandMenuWidget',
@@ -93,10 +96,11 @@ class Constants {
     //flutter功能
     PageBean('Row控件', RowWidget(), 'RowWidget', 'Row'),
 
-
-    PageBean('Navigator向上一个页面返回值', NavigatorFunc(), 'NavigatorFunc', 'Navigator向上一个页面返回值'),
+    PageBean('Navigator向上一个页面返回值', NavigatorFunc(), 'NavigatorFunc',
+        'Navigator向上一个页面返回值'),
     PageBean('状态栏显示和隐藏', StatusBarFunc(), 'StatusBarFunc', '状态栏和底部导航栏显示和隐藏'),
-    PageBean('Clipboard复制数据到剪贴板', ClipboardWidget(), 'ClipboardWidget', 'Clipboard复制数据到剪贴板'),
+    PageBean('Clipboard复制数据到剪贴板', ClipboardWidget(), 'ClipboardWidget',
+        'Clipboard复制数据到剪贴板'),
     PageBean('SharedPreferences', SharePrefWidget(), 'SharePrefWidget',
         'SharedPreferences数据存储功能'),
     PageBean('Json转化', JsonFunc(), 'JsonFunc', 'Json对象转化'),
