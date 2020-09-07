@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutterdemo/anim/splashanim.dart';
 import 'package:flutterdemo/bean/beans.dart';
 import 'package:flutterdemo/dart/fanxing.dart';
 import 'package:flutterdemo/dart/knowlagewidget.dart';
 import 'package:flutterdemo/dart/knowledgewidget1.dart';
+import 'package:flutterdemo/func/BlocProviderWidget.dart';
 import 'package:flutterdemo/func/NavigatorFunc.dart';
 import 'package:flutterdemo/func/clipboardfunc.dart';
 import 'package:flutterdemo/func/futurebuilderfunc.dart';
@@ -15,11 +17,15 @@ import 'package:flutterdemo/func/streamcontrollerbroadcastfunc.dart';
 import 'package:flutterdemo/func/streamcontrollfunc.dart';
 import 'package:flutterdemo/ui/ExpandFlowMenuWidget1.dart';
 import 'package:flutterdemo/ui/appbarstatusbar.dart';
+import 'package:flutterdemo/ui/bottombarfunc.dart';
 import 'package:flutterdemo/ui/expendmenu.dart';
 import 'package:flutterdemo/widget/AnimatedCrossFadeWidget.dart';
 import 'package:flutterdemo/widget/CardWidget.dart';
 import 'package:flutterdemo/widget/ClipRectWidget.dart';
+import 'package:flutterdemo/widget/CustomPaintWidget.dart';
+import 'package:flutterdemo/widget/FlexibleSpaceBarWidget.dart';
 import 'package:flutterdemo/widget/RichTextWidget.dart';
+import 'package:flutterdemo/widget/VisibilityWidget.dart';
 import 'package:flutterdemo/widget/alertdialogwidget.dart';
 import 'package:flutterdemo/widget/animatedcontainerwidget.dart';
 import 'package:flutterdemo/widget/animateddefaulttextstylewidget.dart';
@@ -64,6 +70,7 @@ import 'package:flutterdemo/widget/rowwidget.dart';
 import 'package:flutterdemo/widget/simpledialogwidget.dart';
 import 'package:flutterdemo/widget/singlehildcrollviewwidget.dart';
 import 'package:flutterdemo/widget/sizebox.dart';
+import 'package:flutterdemo/widget/spacerwidget.dart';
 import 'package:flutterdemo/widget/stackwidget.dart';
 import 'package:flutterdemo/widget/streambuilderwidget.dart';
 import 'package:flutterdemo/widget/switchwidget.dart';
@@ -77,6 +84,9 @@ class Constants {
 
   static List<PageBean> uiRoutes = [
     PageBean('Other控件', OtherWidget(), 'OtherWidget', 'Offstage'),
+    PageBean('CustomPaint自定义画图', CustomPainWidget(), 'CustomPainWidget', '使用CustomPaint画一个五角星'),
+    PageBean('复杂的动画效果', SplashAnimWidget(), '复杂的动画效果', '复杂的动画效果'),
+    PageBean('设置首页四个导航页', BottomBarFunc(), 'BottomBarFunc', 'TabBar'),
     PageBean('不设置appbar状态栏沉浸式', AppbarStatusbarFunc(), 'appbarstatusbar.dart',
         'scaffold不设置appbar的时候body内容会顶到状态栏上方，本例解决这个问题'),
     PageBean('FLow实现原型menu', ExpandFlowMenuWidget1(), 'ExpandFlowMenuWidget1',
@@ -95,7 +105,7 @@ class Constants {
   static List<PageBean> routesFunc = [
     //flutter功能
     PageBean('Row控件', RowWidget(), 'RowWidget', 'Row'),
-
+    PageBean('BlockProvider控件使用', BlocProviderWidget(), 'BlocProviderWidget', 'BlockProvider'),
     PageBean('Navigator向上一个页面返回值', NavigatorFunc(), 'NavigatorFunc',
         'Navigator向上一个页面返回值'),
     PageBean('状态栏显示和隐藏', StatusBarFunc(), 'StatusBarFunc', '状态栏和底部导航栏显示和隐藏'),
@@ -114,6 +124,9 @@ class Constants {
   static List<PageBean> routes = [
     //flutter基本控件使用
     PageBean('Other控件', OtherWidget(), 'OtherWidget', 'Offstage'),
+    PageBean('Visibility控件', VisibilityWidget(), 'VisibilityWidget', 'Visibility'),
+    PageBean('FlexibleSpaceBar控件', FlexibleSpaceBarWidget(), 'FlexibleSpaceBarWidget', 'FlexibleSpaceBarWidget'),
+    PageBean('Row和Column中的站位控件', SpacerWidget(), 'SpacerWidget', 'Spacer'),
     PageBean('Progress', ProgressWidget(), 'ProgressWidget',
         'LinearProgressIndicator和其它几种进图条'),
     PageBean('Future', FutureWidget(), 'FutureWidget', 'Future'),
